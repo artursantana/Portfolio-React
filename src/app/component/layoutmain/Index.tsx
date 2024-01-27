@@ -10,6 +10,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 
+
+import Header from '../header/Index'
+
+
+
 const Index = ({children}: {children: ReactNode}) => {
   return (
     <S.Container>
@@ -50,7 +55,7 @@ const Index = ({children}: {children: ReactNode}) => {
 
 
       <S.Section_Right>
-        section
+        <Header />
         {children}
         </S.Section_Right>
     </S.Container>

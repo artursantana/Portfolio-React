@@ -6,7 +6,7 @@ import './global.css'
 const Home = () => {
   return (
     <div>
-      page
+      sdfsdfs
     </div>
   )
 }

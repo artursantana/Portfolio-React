@@ -109,7 +109,7 @@ export const Section_Right = styled.div`
 
 width: 650px;
 height: 550px;
-background-color: blue;
+background-color: #FFF;
 border-radius: 15px;
 box-shadow: 1px 1px 5px 1px;
 
