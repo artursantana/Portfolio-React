@@ -22,29 +22,28 @@ const [pageLoad, setPageLoad] = useState(0);
 useEffect(() => {
   const timeoutId = setTimeout(() => {
     setPageLoad(1);
-  }, 300);
+  }, 1000);
   return () => clearTimeout(timeoutId);
 }, []);
 
+
+
   return (
     <>
-    {pageLoad === 0 &&(<h1>Loading...</h1>)}
     
-{pageLoad === 1 && (
-
   <S.Container>
         <S.SectionTop>
           <h1>Projects :</h1>
         </S.SectionTop>
       
-          <S.SectionBottom>
-            <div className='DivMainProjects'>
-              <div onClick={()=>setFirstModal(!firstModal)}></div>
-              <div onClick={()=>setSecondModal(!secondModal)}></div>
-              <div onClick={()=>setThirdModal(!thirdModal)}></div>
-              <div onClick={()=>setFourthModal(!fourthModal)}></div>
+          <S.SectionBottom >
+            <S.MainProjects>
+            <S.BoxProject skeleton={pageLoad} onClick={() => setFirstModal(!firstModal)}>asdasdasdasdasd</S.BoxProject>
+              <S.BoxProject skeleton={pageLoad} onClick={()=>setSecondModal(!secondModal)}></S.BoxProject>
+              <S.BoxProject skeleton={pageLoad} onClick={()=>setThirdModal(!thirdModal)}></S.BoxProject>
+              <S.BoxProject skeleton={pageLoad} onClick={()=>setFourthModal(!fourthModal)}></S.BoxProject>
       
-            </div>
+            </S.MainProjects>
           </S.SectionBottom>
           <FirstModal modal={firstModal} setModal={setFirstModal}/>
           <SecondModal modal={secondModal} setModal={setSecondModal}/>
@@ -52,7 +51,7 @@ useEffect(() => {
           <FourthModal modal={fourthModal} setModal={setFourthModal}/>
       
       </S.Container>
-      )}
+      
       </>
         )
     

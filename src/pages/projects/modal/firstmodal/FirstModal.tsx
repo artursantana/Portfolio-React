@@ -3,6 +3,7 @@
 import React from 'react'
 import * as S from './style'
 import { Props } from '../props/Index'
+import ModalArchive from './insideModal/Index'
 
 
 
@@ -13,9 +14,8 @@ const FirstModal = ({ modal, setModal }: Props) => {
     return (
       <S.Container>
         <S.Section>
-
-      first modal
       <button onClick={()=>setModal(!modal)}>close</button>
+      <ModalArchive />
         </S.Section>
     </S.Container>
   )
