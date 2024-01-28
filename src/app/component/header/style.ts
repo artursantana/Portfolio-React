@@ -17,12 +17,11 @@ export const HeaderUl = styled.ul<{responsivePage?: number}>`
   (responsivePage || 0) < 650
     ? css`
         justify-content: center;
-        
-        gap: 30px;
+        gap: 25px;
       `
     : css`
-        justify-content: flex-end;
-        gap: 50px;
+        justify-content: center;
+        gap: 70px;
       `};
 
   li {

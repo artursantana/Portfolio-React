@@ -67,7 +67,7 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
         margin-bottom: 30px;
       `
     : css`
-        width: 150px;
+        width: 250px;
         height: 150px;
       `};
 

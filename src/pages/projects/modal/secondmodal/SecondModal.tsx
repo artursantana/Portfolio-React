@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import * as S from './style'
+import * as S from '../style'
 import { Props } from '../props/Index'
 import ModalArchive from './insideModal/Index'
 
@@ -14,7 +14,7 @@ const SecondModal = ({ modal, setModal }: Props) => {
     return (
       <S.Container>
         <S.Section>
-      <button onClick={()=>setModal(!modal)}>close</button>
+        <S.ButtonModalClose onClick={()=>setModal(!modal)}>Close</S.ButtonModalClose>
       <ModalArchive />
         </S.Section>
     </S.Container>

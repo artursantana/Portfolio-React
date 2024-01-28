@@ -1,19 +1,37 @@
 
 
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 
 const Index = () => {
+  const [widthPage, setWidthPage] = useState<number>()
+
+  
+  useEffect(() => {
+
+    setWidthPage(window.innerWidth);
+
+    const handleResize = () => {
+      setWidthPage(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+
+  }, []);
+
+
+
 
   const router = useRouter()
 
   return (
     <S.Container>
-      <S.HeaderUl>
+      <S.HeaderUl responsivePage={widthPage}>
 
       <li><Link 
           href='/' 
