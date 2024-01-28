@@ -1,7 +1,7 @@
 
 
 import * as S from './style'
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,8 +16,28 @@ import Header from '../header/Index'
 
 
 const Index = ({children}: {children: ReactNode}) => {
+
+  const [widthPage, setWidthPage] = useState<number>()
+
+  
+  useEffect(() => {
+
+    setWidthPage(window.innerWidth);
+
+    const handleResize = () => {
+      setWidthPage(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+
+  }, []);
+
+
+
+
   return (
-    <S.Container>
+    <S.Container responsivePage={widthPage}>
       <S.Section_Left>
         <Image src='/image.png' alt='picture' width={100} height={100}/>
         <div className='resume'>
@@ -42,17 +62,11 @@ const Index = ({children}: {children: ReactNode}) => {
         </div>
 
         <div className='buttons'>
-      <button>Hire Me</button>
+      <button><span>Hire Me</span></button>
       <button>Dark UI</button>
         </div>
 
       </S.Section_Left>
-
-
-
-
-
-
 
       <S.Section_Right>
         <Header />

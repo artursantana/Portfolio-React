@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 
+
 export const Container = styled.div`
 display: flex;
 position: absolute;
@@ -14,10 +15,8 @@ background-color: rgba(0,0,0,0.300);
 `
 
 export const Section = styled.div`
-
-margin: auto;
-width: 450px;
-height: 450px;
-background-color: #FFF;
-
-`
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background-color: white;
+`;

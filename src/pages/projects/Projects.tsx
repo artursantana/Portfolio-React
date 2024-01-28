@@ -11,13 +11,13 @@ import ThirdModal from './modal/thirdmodal/ThirdModal'
 import FourthModal from './modal/fourtmodal/FourthModal'
 
 
-
 const Projects = () => {
 const [firstModal,setFirstModal] = useState<React.ReactNode | undefined>(false)
 const [secondModal,setSecondModal] = useState<React.ReactNode | undefined>(false)
 const [thirdModal,setThirdModal] = useState<React.ReactNode | undefined>(false)
 const [fourthModal,setFourthModal] = useState<React.ReactNode | undefined>(false)
 const [pageLoad, setPageLoad] = useState(0);
+const [widthPage, setWidthPage] = useState<number>()
 
 useEffect(() => {
   const timeoutId = setTimeout(() => {
@@ -26,6 +26,20 @@ useEffect(() => {
   return () => clearTimeout(timeoutId);
 }, []);
 
+useEffect(() => {
+
+  setWidthPage(window.innerWidth);
+
+  const handleResize = () => {
+    setWidthPage(window.innerWidth);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+
+}, []);
+
+console.log(widthPage)
 
 
   return (
@@ -36,12 +50,12 @@ useEffect(() => {
           <h1>Projects :</h1>
         </S.SectionTop>
       
-          <S.SectionBottom >
-            <S.MainProjects>
-            <S.BoxProject skeleton={pageLoad} onClick={() => setFirstModal(!firstModal)}>asdasdasdasdasd</S.BoxProject>
-              <S.BoxProject skeleton={pageLoad} onClick={()=>setSecondModal(!secondModal)}></S.BoxProject>
-              <S.BoxProject skeleton={pageLoad} onClick={()=>setThirdModal(!thirdModal)}></S.BoxProject>
-              <S.BoxProject skeleton={pageLoad} onClick={()=>setFourthModal(!fourthModal)}></S.BoxProject>
+          <S.SectionBottom>
+            <S.MainProjects responsivePage={widthPage}>
+            <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={() => setFirstModal(!firstModal)}></S.BoxProject>
+              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setSecondModal(!secondModal)}></S.BoxProject>
+              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setThirdModal(!thirdModal)}></S.BoxProject>
+              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setFourthModal(!fourthModal)}></S.BoxProject>
       
             </S.MainProjects>
           </S.SectionBottom>

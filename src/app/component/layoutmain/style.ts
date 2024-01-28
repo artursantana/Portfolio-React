@@ -1,13 +1,26 @@
 
 
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 
-export const Container = styled.div`
+export const Container = styled.div<{ responsivePage?: number }>`
+
 display: flex;
 margin: auto;
-width: 1080px;
-height: 600px;
+
+${({responsivePage}) =>
+    (responsivePage || 0) > 930
+      ? css`
+          flex-direction: row;
+          max-width: 1000px;
+        `
+      : css`
+          flex-direction: column;
+          max-width: 100%;
+
+        `};
+
 justify-content: center;
 gap: 30px;
 padding: 15px;
@@ -15,15 +28,16 @@ text-align: center;
 align-items: center;
 justify-content: center;
 
-
 `
 export const Section_Left = styled.div`
 
+left: 0;
 width: 250px;
-height: 550px;
+height: 90vh;
 background-color: #FFF;
 border-radius: 15px;
 box-shadow: 1px 1px 5px 1px;
+color: #b3b3b3;
 
 .resume{
 
@@ -31,7 +45,7 @@ box-shadow: 1px 1px 5px 1px;
         margin: 20px auto 20px auto;
         border-radius: 30px;
         width: 150px;
-        background-color: rgba(0,0,0,0.100);
+        background-color: #323232;
     }
 
     .downloadresume{
@@ -39,7 +53,7 @@ box-shadow: 1px 1px 5px 1px;
         margin: auto;
         gap: 5px;
         border-radius: 30px;
-        background-color: rgba(0,0,0,0.100);
+        background-color: #323232;
         width: 150px;
         svg{
             width: 12px;
@@ -59,7 +73,7 @@ box-shadow: 1px 1px 5px 1px;
 }
 
 .Maininformation {
-    background-color: rgba(0,0,0,0.100);
+    background-color: #323232;
 
     .information{
     display: flex;
@@ -68,6 +82,7 @@ box-shadow: 1px 1px 5px 1px;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    padding: 5px;
 
         svg{
             width: 15px;
@@ -78,40 +93,79 @@ box-shadow: 1px 1px 5px 1px;
     }
 }
 
-
-
-
 .buttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 35px;
     gap: 15px;
 
-    button{
-        width: 150px;
-        padding: 10px;
-        border-radius: 15px;
-        
-    }
+/* CSS */
+button {
+  appearance: none;
+  background-color: #323232;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 65%;
+  will-change: transform;
 }
 
+button:disabled {
+  pointer-events: none;
+}
 
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
 
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
-
-
-
+}
 
 `
-export const Section_Right = styled.div`
 
+
+export const Section_Right = styled.div<{responsivePage?: number}>`
+
+${({responsivePage}) => (responsivePage || 0) > 650 ? css`
 width: 650px;
+`: css`
+width: 100%;
+`} ;
+
 height: 550px;
 background-color: #FFF;
 border-radius: 15px;
 box-shadow: 1px 1px 5px 1px;
 
 
+
+
 `
+
+
+

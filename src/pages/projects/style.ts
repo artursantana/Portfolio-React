@@ -20,8 +20,10 @@ export const Container = styled.div`
 `;
 
 export const SectionTop = styled.div`
+
   height: 100px;
   text-align: left;
+
 `;
 
 export const SectionBottom = styled.div`
@@ -32,9 +34,19 @@ export const SectionBottom = styled.div`
 `
 
 
-export const MainProjects = styled.div`
-display: grid;
+export const MainProjects = styled.div<{responsivePage?:number}>`
+
+  ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
+    overflow: scroll;
+    flex-direction: column;
+  `
+  :
+   css`
+    display: grid;
     grid-template-columns: 2fr 2fr;
+    width: 650px;
+  `}
+   
     gap: 25px;
     height: 250px;
     padding: 25px;
@@ -42,21 +54,40 @@ display: grid;
 
 `
 
-export const BoxProject = styled.div<{ skeleton?: number }>`
+export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: number }>`
 
-  margin: auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 15px;
+ margin: auto;
+ border-radius: 15px;
 
-  ${(props) =>
-    props.skeleton === 0 ?
+ ${({ responsivePage }) =>
+  (responsivePage || 0) < 650
+    ? css`
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30px;
+      `
+    : css`
+        width: 150px;
+        height: 150px;
+      `};
+
+  ${({skeleton}) =>
+    skeleton === 0 ?
     css`
-    animation: ${skeletonLoading} 1s infinite;` 
+    animation: ${skeletonLoading} 1s infinite;
+    cursor: progress;
+    `
     : 
     css`
-    background-color: red;`}
+    background-color: #323232;
+    &:hover{
+      opacity: 0.7 ;
+    }
+    cursor: pointer;
+    `}
 
-  cursor: pointer;
+    
+
+
 
 `;
