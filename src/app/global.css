@@ -9,12 +9,13 @@
     font-family: "Poppins", sans-serif;
 }
 
+html{
+    
+    background-color: yellow;
+}
+
 .body{
     display: flex;
     background-color: #323232;
 }
 
-
-.red {
-    background-color: red;
-}

@@ -36,6 +36,9 @@ export const SectionBottom = styled.div`
 
 export const MainProjects = styled.div<{responsivePage?:number}>`
 
+    gap: 25px;
+    padding: 15px;
+
   ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
     overflow: scroll;
     flex-direction: column;
@@ -44,12 +47,10 @@ export const MainProjects = styled.div<{responsivePage?:number}>`
    css`
     display: grid;
     grid-template-columns: 2fr 2fr;
-    width: 650px;
+    
   `}
    
-    gap: 25px;
-    height: 250px;
-    padding: 25px;
+   
 
 
 `
@@ -67,7 +68,7 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
         margin-bottom: 30px;
       `
     : css`
-        width: 250px;
+        width: 150px;
         height: 150px;
       `};
 

@@ -29,9 +29,11 @@ const Index = ({children}: {children: ReactNode}) => {
     };
 
     window.addEventListener('resize', handleResize);
-
+    
 
   }, []);
+
+ 
 
 
 
@@ -68,7 +70,7 @@ const Index = ({children}: {children: ReactNode}) => {
 
       </S.Section_Left>
 
-      <S.Section_Right>
+      <S.Section_Right responsivePage={widthPage}>
         <Header />
         {children}
         </S.Section_Right>

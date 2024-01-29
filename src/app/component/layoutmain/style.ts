@@ -8,6 +8,12 @@ export const Container = styled.div<{ responsivePage?: number }>`
 
 display: flex;
 margin: auto;
+justify-content: center;
+gap: 30px;
+padding: 15px;
+text-align: center;
+align-items: center;
+justify-content: center;
 
 ${({responsivePage}) =>
     (responsivePage || 0) > 930
@@ -20,22 +26,16 @@ ${({responsivePage}) =>
           max-width: 100%;
 
         `};
-
-justify-content: center;
-gap: 30px;
-padding: 15px;
-text-align: center;
-align-items: center;
-justify-content: center;
+;
 
 `
 export const Section_Left = styled.div<{ responsivePage?: number }>`
 
-height: 90vh;
 background-color: #FFF;
 border-radius: 15px;
 box-shadow: 1px 1px 5px 1px;
 color: #b3b3b3;
+height: 600px;
 
 ${({responsivePage}) => (responsivePage || 0) > 350 ? css`
 
@@ -48,7 +48,6 @@ width: 100%;
 
 `}
 
-left: 0;
 
 
 
@@ -162,16 +161,20 @@ button:active {
 
 export const Section_Right = styled.div<{responsivePage?: number}>`
 
-${({responsivePage}) => (responsivePage || 0) > 650 ? css`
-width: 650px;
-`: css`
-width: 100%;
-`} ;
-
-height: 90vh;
 background-color: #FFF;
 border-radius: 15px;
 box-shadow: 1px 1px 5px 1px;
+height: 600px;
+
+${({responsivePage}) => (responsivePage || 0) > 650 ? css`
+width: 650px;
+
+`: css`
+width: 100%;
+
+`} ;
+
+
 
 
 
