@@ -4,10 +4,11 @@
 import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 
 
 const Index = () => {
+  const router = useRouter()
   const [widthPage, setWidthPage] = useState<number>()
 
   
@@ -26,9 +27,9 @@ const Index = () => {
 
 
 
+ 
 
-  const router = useRouter()
-
+  
   return (
     <S.Container>
       <S.HeaderUl responsivePage={widthPage}>
@@ -40,8 +41,8 @@ const Index = () => {
            </Link></li>
 
         <li><Link 
-          href='/home/Home' 
-          className={router.pathname === '/home/Home' ? 'select' : ''}
+          href='/home/Index' 
+          className={router.pathname === '/home/Index' ? 'select' : ''}
            >Resume
            </Link></li>
 

@@ -47,16 +47,22 @@ width: 100%;
 text-align: left;
 
 .DivMain{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 25px;
+    
     height: 250px;
     padding: 25px;
 
     div{
-        margin: auto;
-        width: 150px;
-        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        p{
+            text-align: center;
+            width: 50%;
+        }
+
+        .line{
+            border-right: 1px solid black;
+        }
+       
     }
 }
 

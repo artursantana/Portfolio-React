@@ -41,7 +41,7 @@ const Index = ({children}: {children: ReactNode}) => {
   return (
     <S.Container responsivePage={widthPage}>
       <S.Section_Left responsivePage={widthPage}>
-        <Image src='/image.png' alt='picture' width={100} height={100}/>
+        <Image src='/images/image.png' alt='picture' width={100} height={100}/>
         <div className='resume'>
           <p>Front-End</p>
           <div className='downloadresume'>

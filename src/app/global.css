@@ -11,12 +11,10 @@
 
 html{
     
-    background-color: yellow;
+    background-color: #ffbb33;
 }
 
 .body{
     display: flex;
     background-color: #323232;
 }
-
-/*#ffbb33*/
