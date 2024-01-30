@@ -9,18 +9,48 @@ height: 500px;
 padding: 25px;
 overflow-y: scroll;
 
+
 `
 
 export const SectionHeader = styled.div`
 
 display: flex;
+flex-direction: column;
 
+div{
+    #SeeMore{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background: none;
+        
+        .button{
+            color: blue;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
 
-p{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    background-color: antiquewhite;
+    .show{
+        height: 100px;
+        overflow: hidden;
+    }
+
+}
+
+.SocialMedia{
+    margin: 25px 0 25px 0;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+
+        svg{
+            font-size: 50px;
+        }
+    }
 }
 
 
@@ -28,21 +58,9 @@ p{
 
 export const SectionSide = styled.div`
 
-display: flex;
-flex-direction: column;
-text-align: left;
-
-
-
-
-.skillsEmojis{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    
-     
-}
+background-color: yellow;
+width: 100%;
+height: 250px;
 
 
 `
@@ -50,8 +68,22 @@ text-align: left;
 
 export const SectionBottom = styled.div`
 
+position: relative;
 width: 100%;
 height: 350px;
 background-color: antiquewhite;
 
+
+
+.buttonTopPage{
+    position: fixed;
+    
+    
+    opacity: 0;
+}
+
 `
+
+
+
+

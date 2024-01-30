@@ -42,7 +42,7 @@ const Index = () => {
         <li><Link 
           href='/home/Home' 
           className={router.pathname === '/home/Home' ? 'select' : ''}
-           >Home
+           >Resume
            </Link></li>
 
         <li><Link

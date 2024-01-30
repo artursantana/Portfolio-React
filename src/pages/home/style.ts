@@ -16,12 +16,34 @@ export const SectionTop = styled.div`
 height: 100px;
 text-align: left;
 
+`
+
+
+export const SectionSide = styled.div`
+
+display: flex;
+flex-direction: column;
+text-align: left;
+
+.skillsEmojis{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+     
+}
+
+.buttonBottomPage{
+background-color: beige;
+}
+
 
 `
+
+
 export const SectionBottom = styled.div`
 
 width: 100%;
-
 text-align: left;
 
 .DivMain{

@@ -39,7 +39,7 @@ height: 600px;
 
 ${({responsivePage}) => (responsivePage || 0) > 350 ? css`
 
-width: 350px;
+width: 300px;
 
 `:
 css`
