@@ -8,6 +8,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 
 
@@ -111,9 +112,10 @@ const About = () => {
       </S.SectionSide>
       
       <S.SectionBottom>
-
-      <button onClick={() => handleScroll({ direction: 'up' })} className='buttonTopPage'>Top</button>
+        
+      <h1><Link href='/projects/Projects'>See My Portfolio</Link></h1>
       </S.SectionBottom>
+      <button onClick={() => handleScroll({ direction: 'up' })} className='buttonTopPage'>Top Scroll</button>
       
     </S.Container>
   )

@@ -5,10 +5,17 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
 
+position: relative;
 height: 500px;
 padding: 25px;
 overflow-y: scroll;
 
+
+.buttonTopPage{
+    
+    bottom: 0;
+ 
+}
 
 `
 
@@ -58,7 +65,6 @@ div{
 
 export const SectionSide = styled.div`
 
-background-color: yellow;
 width: 100%;
 height: 250px;
 
@@ -68,19 +74,18 @@ height: 250px;
 
 export const SectionBottom = styled.div`
 
-position: relative;
+display: flex;
+justify-content: center;
 width: 100%;
 height: 350px;
-background-color: antiquewhite;
 
-
-
-.buttonTopPage{
-    position: fixed;
-    
-    
-    opacity: 0;
+h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
+
+
 
 `
 
