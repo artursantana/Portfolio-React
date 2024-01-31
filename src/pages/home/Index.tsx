@@ -1,18 +1,13 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 import Home from './Home'
-import Education from './experience/Education'
-import Experience from './experience/Experience'
 
-const Index = () => {
+const Index = ({children}: {children: ReactNode}) => {
   return (
     <>
       <Home>
-        <Education />
-        <Experience />
-        
+        {children}
       </Home>
-
     </>
   )
 }

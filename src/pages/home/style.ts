@@ -9,6 +9,7 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
 padding: 25px;
 height: 100%;
+background-color: red;
 
 `
 export const SectionTop = styled.div`
@@ -43,6 +44,7 @@ background-color: beige;
 
 export const SectionBottom = styled.div`
 
+background-color: aliceblue;
 width: 100%;
 text-align: left;
 
@@ -54,12 +56,13 @@ text-align: left;
     div{
         display: flex;
         justify-content: space-around;
-        p{
+        a{
+            text-decoration: none;
             text-align: center;
             width: 50%;
         }
 
-        .line{
+        #line{
             border-right: 1px solid black;
         }
        

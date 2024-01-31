@@ -4,11 +4,17 @@
 import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import Link from 'next/link'
-import { useRouter } from "next/router"
+import { usePathname } from 'next/navigation';
+
+
 
 
 const Index = () => {
-  const router = useRouter()
+  
+
+  const pathname = usePathname();
+  
+  
   const [widthPage, setWidthPage] = useState<number>()
 
   
@@ -26,35 +32,33 @@ const Index = () => {
   }, []);
 
 
-
- 
-
   
   return (
     <S.Container>
       <S.HeaderUl responsivePage={widthPage}>
 
       <li><Link 
+      
           href='/' 
-          className={router.pathname === '/' ? 'select' : ''}
+          className={pathname === '/' ? 'select' : ''}
            >DashBoard
            </Link></li>
 
         <li><Link 
           href='/home/Index' 
-          className={router.pathname === '/home/Index' ? 'select' : ''}
+          className={pathname === '/home/Index' ? 'select' : ''}
            >Resume
            </Link></li>
 
         <li><Link
          href='/about/About' 
-         className={router.pathname === '/about/About' ? 'select' : ''}
+         className={pathname === '/about/About' ? 'select' : ''}
          >About
          </Link></li>
 
         <li><Link 
          href='/projects/Projects'
-         className={router.pathname === '/projects/Projects' ? 'select' : ''}
+         className={pathname === '/projects/Projects' ? 'select' : ''}
           >Projects
           </Link></li>
 

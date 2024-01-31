@@ -2,12 +2,13 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import * as S from './style';
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 
 
 
 const Home = ({children}: {children : ReactNode}) => {
-  
 
+  const pathname = usePathname();
 
   const [pageLoad, setPageLoad] = useState(0);
 
@@ -41,11 +42,14 @@ const Home = ({children}: {children : ReactNode}) => {
             <h1>What I am doing</h1>
             <div className='DivMain'>
               <div>
-              <Link 
-          href='/experience/Experience'>DashBoard
+              <Link id='line'
+          href='/home/experience/Experience' className={pathname === '/projects/Projects' ? 'select' : ''}>Experience
            </Link>
-                <p className='line'>Experience</p>
-                <p>Education</p>
+                
+           <Link
+           className={pathname === '/projects/Projects' ? 'select' : ''}
+          href='/home/experience/Education'>Education
+           </Link>
               </div>
             </div>
           </S.SectionBottom>
