@@ -9,7 +9,6 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
 padding: 25px;
 height: 100%;
-background-color: red;
 
 `
 export const SectionTop = styled.div`
@@ -20,31 +19,10 @@ text-align: left;
 `
 
 
-export const SectionSide = styled.div`
-
-display: flex;
-flex-direction: column;
-text-align: left;
-
-.skillsEmojis{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-     
-}
-
-.buttonBottomPage{
-background-color: beige;
-}
-
-
-`
-
 
 export const SectionBottom = styled.div`
 
-background-color: aliceblue;
+
 width: 100%;
 text-align: left;
 
@@ -56,14 +34,14 @@ text-align: left;
     div{
         display: flex;
         justify-content: space-around;
-        a{
+        p{
             text-decoration: none;
-            text-align: center;
-            width: 50%;
+            
         }
 
         #line{
-            border-right: 1px solid black;
+            text-align: center;
+            width: 50%;
         }
        
     }

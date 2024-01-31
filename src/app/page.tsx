@@ -1,11 +1,15 @@
 
+'use client'
+
 import React from 'react'
+
+
 
 const page = () => {
   return (
-    <div>
-      artur
-    </div>
+   <>
+   <h1>page</h1>
+   </>
   )
 }
 

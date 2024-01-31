@@ -45,8 +45,8 @@ const Index = () => {
            </Link></li>
 
         <li><Link 
-          href='/home/Index' 
-          className={pathname === '/home/Index' ? 'select' : ''}
+          href='/home/Home' 
+          className={pathname === '/home/Home' ? 'select' : ''}
            >Resume
            </Link></li>
 
