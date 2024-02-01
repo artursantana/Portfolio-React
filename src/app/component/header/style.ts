@@ -37,9 +37,10 @@ export const HeaderUl = styled.ul<{responsivePage?: number}>`
         width: 0;
         height: 2px;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: #323232;
-        transition: width 0.3s ease;
+        transition: width 0.5s ease;
       }
 
       &:hover::after {

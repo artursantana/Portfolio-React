@@ -1,7 +1,7 @@
 
 
 
-import React from 'react';
+import React,{ useEffect, useState } from 'react';
 import * as S from './style'
 import Image from 'next/image'
 
@@ -11,13 +11,29 @@ type Props = {
 
 const Index: React.FC<Props> = ({ showDiv }) => {
 
+  const [widthPage, setWidthPage] = useState<number>()
+
+  
 
 
+  useEffect(() => {
+
+    setWidthPage(window.innerWidth);
+  
+    const handleResize = () => {
+      setWidthPage(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+  
+  }, []);
+  console.log(widthPage)
   return (
     <div>
       {!showDiv && (
-        <S.Container>
-            <S.SectionContainer>
+        <S.Container responsivePage={widthPage}>
+            <S.SectionContainer responsivePage={widthPage}>
 
             
           <S.UlContainer>
@@ -51,7 +67,7 @@ const Index: React.FC<Props> = ({ showDiv }) => {
             <li>French beginner</li>
           </S.AsideContainer>
           </S.SectionContainer>
-          <S.SectionContainerBottom>
+          <S.SectionContainerBottom responsivePage={widthPage}>
             <h1>INTERESTS</h1>
             <li>Back End Development</li>
             <li>Website development</li>
@@ -61,21 +77,30 @@ const Index: React.FC<Props> = ({ showDiv }) => {
       )}
 
       {showDiv && (
-        <div>
-           <S.SectionSide>
-    <div><h1>Skills :</h1></div>
-    <div className='skillsEmojis'>
-    <Image src='/images/html.png' alt='picture' width={150} height={150}/> 
-    <Image src='/images/boot.png' alt='picture' width={90} height={80}/> 
-    <Image src='/images/emotion.png' alt='picture' width={200} height={80}/> 
-    <Image src='/next.png' alt='picture' width={100} height={80}/> 
-    </div>
-    
+        
+        <S.SectionSide>
+    <h1>Skills :</h1>
+    <S.InsideSectionSide responsivePage={widthPage}>
+      <p>HTML | CSS | JAVASCRIPT | TYPESCRIPT</p>
+      <p>Scss | Style-Components | Emotion.js</p>
+      <p>React.js | Vite.js | Next.js</p>
+      <p>Angular.js</p>
+      <p>Node.js</p>
+    </S.InsideSectionSide>
   </S.SectionSide>
-        </div>
+        
       )}
     </div>
   );
 };
 
 export default Index;
+
+
+
+/*
+ 
+    <Image src='/images/boot.png' alt='picture' width={90} height={80}/> 
+    <Image src='/images/emotion.png' alt='picture' width={200} height={80}/> 
+    <Image src='/next.png' alt='picture' width={100} height={80}/> 
+    */ 

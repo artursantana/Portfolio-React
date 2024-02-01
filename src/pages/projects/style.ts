@@ -42,6 +42,7 @@ export const MainProjects = styled.div<{responsivePage?:number}>`
   ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
     overflow: scroll;
     flex-direction: column;
+    height: 350px;
   `
   :
    css`

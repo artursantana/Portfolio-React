@@ -39,8 +39,6 @@ useEffect(() => {
 
 }, []);
 
-console.log(widthPage)
-
 
   return (
     <>
