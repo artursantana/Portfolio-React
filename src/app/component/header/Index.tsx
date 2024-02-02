@@ -1,5 +1,5 @@
 
-
+'use client'
 
 import React, { useEffect, useState } from 'react'
 import * as S from './style'
@@ -40,7 +40,7 @@ const Index = () => {
       <li><Link 
       
           href='/' 
-          className={pathname === '/' ? 'select' : ''}
+          className={pathname=== '/' ? 'select' : ''}
            >DashBoard
            </Link></li>
 

@@ -7,14 +7,17 @@ import Image from 'next/image'
 
 type Props = {
   showDiv?: boolean;
+  loadingBar?: number | undefined 
 };
 
-const Index: React.FC<Props> = ({ showDiv }) => {
+
+
+const Index: React.FC<Props> = ({ showDiv, loadingBar }) => {
 
   const [widthPage, setWidthPage] = useState<number>()
 
   
-
+  
 
   useEffect(() => {
 
@@ -28,7 +31,7 @@ const Index: React.FC<Props> = ({ showDiv }) => {
   
   
   }, []);
-  console.log(widthPage)
+  
   return (
     <div>
       {!showDiv && (
@@ -37,7 +40,7 @@ const Index: React.FC<Props> = ({ showDiv }) => {
 
             
           <S.UlContainer>
-              <h1>Education</h1>
+              <h1>Education <span>.</span></h1>
               <li>
                 <h3>Front End Developer</h3>
               <p>Tokio School - Portugal</p>
@@ -60,7 +63,7 @@ const Index: React.FC<Props> = ({ showDiv }) => {
               
           </S.UlContainer>
           <S.AsideContainer>
-            <h1>Lenguages</h1>
+            <h1>Lenguages<span>.</span></h1>
             <li>Native Portuguese</li>
             <li>Advanced English</li>
             <li>Middle Spanish</li>
@@ -68,7 +71,7 @@ const Index: React.FC<Props> = ({ showDiv }) => {
           </S.AsideContainer>
           </S.SectionContainer>
           <S.SectionContainerBottom responsivePage={widthPage}>
-            <h1>INTERESTS</h1>
+            <h1>Interest<span>.</span></h1>
             <li>Back End Development</li>
             <li>Website development</li>
             <li>English and French</li>
@@ -79,8 +82,8 @@ const Index: React.FC<Props> = ({ showDiv }) => {
       {showDiv && (
         
         <S.SectionSide>
-    <h1>Skills :</h1>
-    <S.InsideSectionSide responsivePage={widthPage}>
+    <h1>Skills <span>:</span></h1>
+    <S.InsideSectionSide responsivePage={widthPage} loadingBar={loadingBar}>
       <p>HTML | CSS | JAVASCRIPT | TYPESCRIPT</p>
       <p>Scss | Style-Components | Emotion.js</p>
       <p>React.js | Vite.js | Next.js</p>

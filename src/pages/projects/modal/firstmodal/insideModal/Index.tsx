@@ -10,7 +10,8 @@ import Image from 'next/image'
 const Index = () => {
   return (
     <S.Container>
-      <Image src='/teste.png' alt='picture' width={200} height={200}/>
+      <S.ImageContainer></S.ImageContainer>
+        <div className='techs'><Image src='/images/about.jpg' alt='picture' width={50} height={50}/></div>
       <S.Section>
         <button>Deploy</button>
         <button>Github</button>

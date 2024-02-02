@@ -9,11 +9,19 @@ const Home = () => {
 
   const [pageLoad, setPageLoad] = useState(0);
   const [showComponentChild, setShowComponentChild] = useState(false)
+  const [loadingBar, setLoadingBar] = useState(0)
 
   
 const clickShowDiv = () => {
   if (setShowComponentChild) {
     setShowComponentChild(!showComponentChild);
+   
+      const timeoutLoadbar = setTimeout(() => {
+        setLoadingBar(1);
+      }, 300);
+      return () => clearTimeout(timeoutLoadbar);
+
+    
     }
 }
 
@@ -36,12 +44,12 @@ const clickShowDiv = () => {
          
 
           <S.SectionBottom>
-            <h1>What I am doing</h1>
+            <h1>Training !</h1>
             <div className='DivMain'>
               <div>
               <p id='line' onClick={clickShowDiv}>{showComponentChild ? '<<< Back': 'Next Page >>>'}</p> 
               </div>
-              <Index showDiv={showComponentChild}/>
+              <Index showDiv={showComponentChild} loadingBar={loadingBar}/>
             </div>
           </S.SectionBottom>
         </S.Container>

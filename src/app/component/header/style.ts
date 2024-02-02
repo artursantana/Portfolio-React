@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { primeColor,FontColor } from '../../Style'
 
 export const Container = styled.header`
   border-bottom: 3px solid #323232;
@@ -12,6 +13,8 @@ export const HeaderUl = styled.ul<{responsivePage?: number}>`
   text-decoration: none;
   padding: 20px;
   font-weight: bold;
+  background-color: ${FontColor};
+  border-radius: 15px;
 
   ${({ responsivePage }) =>
   (responsivePage || 0) < 650
@@ -39,7 +42,7 @@ export const HeaderUl = styled.ul<{responsivePage?: number}>`
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #323232;
+        background-color: ${primeColor};
         transition: width 0.5s ease;
       }
 

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css, keyframes } from "@emotion/react";
+import { primeColor } from "@/app/Style";
 
 
 const skeletonLoading = keyframes`
@@ -23,6 +24,10 @@ export const SectionTop = styled.div`
 
   height: 100px;
   text-align: left;
+
+  h1{
+    color: ${primeColor};
+  }
 
 `;
 
@@ -50,9 +55,6 @@ export const MainProjects = styled.div<{responsivePage?:number}>`
     grid-template-columns: 2fr 2fr;
     
   `}
-   
-   
-
 
 `
 
@@ -69,7 +71,8 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
         margin-bottom: 30px;
       `
     : css`
-        width: 150px;
+    border: 3px solid ${primeColor};
+        width: 280px;
         height: 150px;
       `};
 
@@ -81,10 +84,14 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
     `
     : 
     css`
-    background-color: #323232;
+    
     &:hover{
       opacity: 0.7 ;
     }
+    
+    background-image: url('/images/about.jpg');
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
     `}
 

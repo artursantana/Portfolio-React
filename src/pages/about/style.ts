@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { FontColor, primeColor } from '../../app/Style'
 
 
 
@@ -11,9 +12,23 @@ padding: 25px;
 overflow-y: scroll;
 
 
-.buttonTopPage{
+.buttonBottomPage{
+    width: 110px;
+    font-size: 15px;
+    color: ${primeColor};
+    background-color: transparent;
+    margin-bottom: 15px;
+    border-radius: 15px;
     
+}
+
+.buttonTopPage{
+    font-size: 15px;
+    color: ${primeColor};
+    background-color: transparent;
     bottom: 0;
+    border-radius: 15px;
+    width: 110px;
  
 }
 
@@ -25,6 +40,13 @@ display: flex;
 flex-direction: column;
 
 div{
+    color: ${FontColor};
+   h1{
+    color: ${FontColor};
+    span{
+        color: ${primeColor};
+    }
+   }
     #SeeMore{
         flex-direction: column;
         text-align: center;
@@ -48,14 +70,22 @@ div{
 }
 
 .SocialMedia{
-    margin: 25px 0 25px 0;
+    margin: 25px 0 18px 0;
     ul{
         display: flex;
         justify-content: space-around;
         list-style: none;
+        a{
+            text-decoration: none;
+            color: ${FontColor};
+        }
 
         svg{
             font-size: 50px;
+            &:hover{
+                color: ${primeColor};
+                cursor: pointer;
+            }
         }
     }
 }
@@ -66,7 +96,19 @@ div{
 export const SectionSide = styled.div`
 
 width: 100%;
-height: 250px;
+height: auto;
+background-color: ${FontColor};
+border-radius: 15px;
+padding: 5px;
+
+
+
+h1{
+    span{
+        color: ${primeColor};
+    }
+}
+
 
 
 `
@@ -83,6 +125,22 @@ h1{
     display: flex;
     text-align: center;
     align-items: center;
+    
+    a{
+
+        box-shadow: 1px 1px 1px ${primeColor};
+        text-decoration: none;
+        color: ${FontColor};
+        span{
+                color: ${primeColor};
+           
+        }
+        &:hover{
+            opacity: 0.5;
+        }
+       
+    }
+    
 }
 
 
