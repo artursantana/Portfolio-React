@@ -85,7 +85,7 @@ const About = () => {
 
            where I specialized in Front-end Development. During my time at school, I delved deeply into a variety of disciplines essential to building interactive and engaging interfaces for web users.</div>
 
-          <Image src='/images/about.jpg' alt='picture' width={250} height={250}/>
+          <Image src='/images/about.jpg' alt='picture' width={300} height={250}/>
 
         </div>
 

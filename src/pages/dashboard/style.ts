@@ -12,7 +12,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 color: ${FontColor};
-padding: 25px;
+padding: 5px;
 
 
 `
@@ -33,31 +33,31 @@ p{
 `
 
 export const AsideContainer = styled.div`
+
 display: flex;
+
 img{
+    
     border-radius: 15px;
+    
 }
 
 `
-
-
 
 export const BoxContainer = styled.div`
 
 display: flex;
 margin: auto;
-margin-top: 25px;
 position: relative;
 align-items: center;
 justify-content: center;
 
 
-
 .moreProjects{
     display: flex;
     position: absolute;
-    bottom: -35px;
-    left: -55px;
+    bottom: 35px;
+    left: -25px;
     width: 150px;
     height: 60px;
     border-radius: 15px;
@@ -80,8 +80,8 @@ justify-content: center;
 .detailSkilss{
     display: flex;
     position: absolute;
-    top: -35px;
-    right: -55px;
+    top: 45px;
+    right: -35px;
     width: 150px;
     height: 60px;
     border-radius: 15px;
@@ -105,7 +105,7 @@ justify-content: center;
 export const BottomContainer = styled.div`
 
 border-top: 3px solid #FFF;
-margin-top: 60px;
+margin-top: 10px;
 
 
 .skills{

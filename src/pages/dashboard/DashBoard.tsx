@@ -19,7 +19,7 @@ const DashBoard = () => {
           <Link href='../home/experience/Index'>
               <div className='detailSkilss'><h3>Skills +</h3></div>
           </Link> 
-          <Image src='/images/about.jpg' alt='picture' width={250} height={250}/>
+           <Image src='/Artur2.png' alt='picture' width={350} height={350}/>
           </S.BoxContainer>
       </S.AsideContainer>
       

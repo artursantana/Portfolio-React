@@ -10,6 +10,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../header/Index'
+import Link from 'next/link';
 
 const artur = '< Artur />'
 
@@ -40,10 +41,7 @@ const Index = ({children}: {children: ReactNode}) => {
           <h1>{artur}</h1>
           
         </div>
-        <div className='socialMedia'>
-        <FontAwesomeIcon icon={faGithub} />
-        <FontAwesomeIcon icon={faLinkedin} />
-        </div>
+       
 
         <div className="Maininformation">
           <div className='information'>
@@ -54,11 +52,19 @@ const Index = ({children}: {children: ReactNode}) => {
             <FontAwesomeIcon icon={faWhatsapp} />
             <p>+351 <span>966617578</span></p>
           </div>
+          <div className='socialMedia'>
+        <Link href='https://github.com/artursantana' >
+          <FontAwesomeIcon icon={faGithub} />
+        </Link>
+        <Link href='https://www.linkedin.com/in/artur-santana-8a9902238'>
+          <FontAwesomeIcon icon={faLinkedin} />
+        </Link>
+        </div>
         </div>
 
         <div className='buttons'>
         <button><span>Hire Me</span></button>
-        <button><FontAwesomeIcon icon={faFile} /> Download CV</button>
+       <button><FontAwesomeIcon icon={faFile} /> Download CV</button>
         </div>
 
       </S.Section_Left>

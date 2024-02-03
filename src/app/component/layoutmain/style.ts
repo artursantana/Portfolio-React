@@ -74,12 +74,16 @@ h1{
     
    display: flex;
    margin: 20px auto 20px auto;
+   padding:15px 0 15px 0;
    justify-content: space-around;
    width: 100%;
    
 
    svg{
+    color:white;
     width: 50px;
+    height: 50px;
+    cursor: pointer;
    }
 }
 
@@ -96,7 +100,7 @@ h1{
     align-items: center;
     justify-content: center;
     margin-top: 15px;
-    padding: 5px;
+    padding: 15px 0 15px 0;
 
     
 

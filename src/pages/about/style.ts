@@ -38,7 +38,9 @@ export const SectionHeader = styled.div`
 
 display: flex;
 flex-direction: column;
-
+img{
+        border-radius: 15px;
+    }
 div{
     color: ${FontColor};
    h1{
@@ -46,6 +48,7 @@ div{
     span{
         color: ${primeColor};
     }
+   
    }
     #SeeMore{
         flex-direction: column;
