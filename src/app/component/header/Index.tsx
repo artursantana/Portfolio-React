@@ -32,6 +32,8 @@ const Index = () => {
   }, []);
 
 
+
+
   
   return (
     <S.Container>
@@ -39,8 +41,8 @@ const Index = () => {
 
       <li><Link 
       
-          href='/' 
-          className={pathname=== '/' ? 'select' : ''}
+          href='/Index' 
+          className={pathname=== '/Index' ? 'select' : ''}
            >DashBoard
            </Link></li>
 

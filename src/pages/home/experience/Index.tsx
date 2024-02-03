@@ -3,7 +3,6 @@
 
 import React,{ useEffect, useState } from 'react';
 import * as S from './style'
-import Image from 'next/image'
 
 type Props = {
   showDiv?: boolean;
@@ -100,10 +99,3 @@ const Index: React.FC<Props> = ({ showDiv, loadingBar }) => {
 export default Index;
 
 
-
-/*
- 
-    <Image src='/images/boot.png' alt='picture' width={90} height={80}/> 
-    <Image src='/images/emotion.png' alt='picture' width={200} height={80}/> 
-    <Image src='/next.png' alt='picture' width={100} height={80}/> 
-    */ 

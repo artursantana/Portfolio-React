@@ -6,6 +6,7 @@ import Index from './component/layoutmain/Index'
 
 const layout = ({children}: {children: ReactNode}) => {
   return (
+    
     <div className='body'>
         <Index>
           {children}

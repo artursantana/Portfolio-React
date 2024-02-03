@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { primeColor } from '../../../app/Style'
 
 
 
@@ -22,7 +23,7 @@ export const Section = styled.div`
   }
   width: 650px;
   height: 450px;
-  background-color: white;
+  background-color: ${primeColor};
 `;
 
 export const ButtonModalClose = styled.button`

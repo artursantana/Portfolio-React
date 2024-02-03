@@ -1,9 +1,9 @@
 
 
-import { ColorContainer, FontColor } from '../../Style'
+import { ColorContainer, FontColor,primeColor } from '../../Style'
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { primeColor } from '../../Style'
+
 
 
 export const Container = styled.div<{ responsivePage?: number }>`
@@ -56,7 +56,7 @@ width: 100%;
 
 h1{
     margin-top:25px;
-    text-shadow: 1px 1px 3px #323232;
+    text-shadow: 1px 1px 3px ${ColorContainer};
     font-size:55px;
 }
     p{
@@ -65,7 +65,7 @@ h1{
         
         justify-content:center;
         align-items:center;
-        color:#323232;
+        color:${ColorContainer};
     }
     
 }
@@ -84,7 +84,7 @@ h1{
 }
 
 .Maininformation {
-    background-color: #323232;
+    background-color: ${ColorContainer};
     span{
       color:${FontColor};
     }
@@ -146,7 +146,7 @@ h1{
         gap: 5px;
         background-color:transparent;
         border-radius:10px;
-        border:3px solid #323232;
+        border:3px solid ${ColorContainer};
         font-size:20px;
         align-items:center;
         justify-content:center;
@@ -190,12 +190,3 @@ width: 100%;
 
 `
 
-
-
-/*
-
-
-
-
- 
-*/
