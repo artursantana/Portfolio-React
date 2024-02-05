@@ -44,7 +44,7 @@ const clickShowDiv = () => {
          
 
           <S.SectionBottom>
-            <h1>Training !</h1>
+            <h1>{showComponentChild ? 'Skills :' : 'Training :'}</h1>
             <div className='DivMain'>
               <div>
               <p id='line' onClick={clickShowDiv}>{showComponentChild ? '<<< Back': 'Next Page >>>'}</p> 

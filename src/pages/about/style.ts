@@ -57,10 +57,13 @@ div{
         background: none;
         
         .button{
-            color: blue;
+            color: ${primeColor};
             cursor: pointer;
+            transition: all 0.5s;
             &:hover{
                 opacity: 0.6;
+                font-size: larger;
+                transition: all 0.5s;
             }
         }
     }

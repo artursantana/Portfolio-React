@@ -21,6 +21,7 @@ export const HeaderUl = styled.ul<{responsivePage?: number}>`
     ? css`
         justify-content: center;
         gap: 25px;
+        font-size:15px;
       `
     : css`
         justify-content: center;

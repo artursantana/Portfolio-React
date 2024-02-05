@@ -49,6 +49,13 @@ text-align: left;
         #line{
             text-align: center;
             width: 50%;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover{
+                transition: all 0.5s;
+                font-size: larger;
+                color: ${primeColor};
+            }
         }
        
     }

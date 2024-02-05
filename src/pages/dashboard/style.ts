@@ -4,6 +4,7 @@
 import styled from "@emotion/styled";
 
 import {  FontColor, primeColor } from '../../app/Style'
+import { css } from "@emotion/react";
 
 
 export const Container = styled.div`
@@ -11,8 +12,13 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
+
 color: ${FontColor};
 padding: 5px;
+
+@media (max-width: 500px) {
+    background-color: #323232;
+}
 
 
 `
@@ -44,20 +50,36 @@ img{
 
 `
 
-export const BoxContainer = styled.div`
+export const BoxContainer = styled.div<{responsivePage?: number}>`
 
 display: flex;
 margin: auto;
 position: relative;
 align-items: center;
 justify-content: center;
+img{
+    width: 100%;
+}
 
 
 .moreProjects{
     display: flex;
     position: absolute;
+
+    ${({responsivePage}) => (responsivePage || 0) < 450 ? css`
+
     bottom: 35px;
-    left: -25px;
+    left: -5px;
+    
+    `: css`
+
+    bottom: 35px;
+    left: -15px;
+
+    `}
+
+
+    
     width: 150px;
     height: 60px;
     border-radius: 15px;
@@ -80,8 +102,18 @@ justify-content: center;
 .detailSkilss{
     display: flex;
     position: absolute;
+
+
+    ${({responsivePage}) => (responsivePage || 0) < 450 ? css`
+
+    top: 45px;
+    right: -10px;
+    
+    `:css`
     top: 45px;
     right: -35px;
+    `}
+    
     width: 150px;
     height: 60px;
     border-radius: 15px;
@@ -106,7 +138,6 @@ export const BottomContainer = styled.div`
 
 border-top: 3px solid #FFF;
 margin-top: 10px;
-
 
 .skills{
     margin-top: 15px;

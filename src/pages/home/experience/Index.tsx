@@ -30,7 +30,14 @@ const Index: React.FC<Props> = ({ showDiv, loadingBar }) => {
   
   
   }, []);
+
+  const html = '{ Dominei HTML, CSS, JavaScript e TypeScript, aplicando-os em projetos tangíveis. Pronto para contribuir com inovação e aprendizado contínuo.}'
+
+  const css = '{ domínio em Scss, Style-Components e Emotion.js. Crio experiências visuais envolventes com um toque de elegância.}'
   
+  const javascript = '{ Desbravador do universo React.js e Next.js, aprimorei meu domínio nas tecnologias que impulsionam a web moderna. Além disso, sou um habilidoso manipulador de interações dinâmicas com JQUERY.}'
+  
+  const back = '{ Afiei minhas habilidades no backend, dominando SQL, MySQL e Node.js. Construo aplicações sólidas e escaláveis para garantir um desenvolvimento eficiente.}'
   return (
     <div>
       {!showDiv && (
@@ -81,13 +88,23 @@ const Index: React.FC<Props> = ({ showDiv, loadingBar }) => {
       {showDiv && (
         
         <S.SectionSide>
-    <h1>Skills <span>:</span></h1>
     <S.InsideSectionSide responsivePage={widthPage} loadingBar={loadingBar}>
-      <p>HTML | CSS | JAVASCRIPT | TYPESCRIPT</p>
-      <p>Scss | Style-Components | Emotion.js</p>
-      <p>React.js | Vite.js | Next.js</p>
-      <p>Angular.js</p>
-      <p>Node.js</p>
+      <div>
+        <p><span>const</span> HTML | CSS | JAVASCRIPT | TYPESCRIPT <span>= </span></p>
+        <span>{html}</span>
+      </div>
+      <div>
+        <p><span>const</span> Scss | Style-Components | Emotion.js <span>= </span></p>
+        <span>{css}</span>
+      </div>
+      <div>
+        <p><span>const</span> React.js | Next.js | JQUERY <span>= </span></p>
+        <span>{javascript}</span>
+      </div>
+      <div>
+        <p><span>const</span> SQL | MYSQL | NODE.JS <span>= </span></p>
+        <span>{back}</span>
+      </div>
     </S.InsideSectionSide>
   </S.SectionSide>
         

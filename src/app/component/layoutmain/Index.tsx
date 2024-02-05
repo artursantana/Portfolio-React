@@ -8,6 +8,8 @@ import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../header/Index'
 import Link from 'next/link';
@@ -44,19 +46,25 @@ const Index = ({children}: {children: ReactNode}) => {
        
 
         <div className="Maininformation">
-          <div className='information'>
-            <div>Porto / <span>Portugal</span></div>
-          </div>
-          <p>artursantana843<span>@gmail.com</span></p>
-          <div className='information2'>
-            <FontAwesomeIcon icon={faWhatsapp} />
+          <div className='number'>
+            <p>
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </p>
             <p>+351 <span>966617578</span></p>
           </div>
+          <div className='email'>
+          <p><FontAwesomeIcon icon={faEnvelope} /></p>
+            <p>artursantana843@gmail.com</p>
+            </div>
+          <div className='localize'>
+            <p><FontAwesomeIcon icon={faLocationDot} /></p>
+            <p>Porto / Portugal</p>
+          </div>
           <div className='socialMedia'>
-        <Link href='https://github.com/artursantana' >
+        <Link href='https://github.com/artursantana' target='blank' >
           <FontAwesomeIcon icon={faGithub} />
         </Link>
-        <Link href='https://www.linkedin.com/in/artur-santana-8a9902238'>
+        <Link href='https://www.linkedin.com/in/artur-santana-8a9902238' target='blank'>
           <FontAwesomeIcon icon={faLinkedin} />
         </Link>
         </div>

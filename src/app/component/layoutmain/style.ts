@@ -38,7 +38,7 @@ box-shadow: 1px 1px 5px 1px black;
 color: ${primeColor};
 height: 600px;
 
-${({responsivePage}) => (responsivePage || 0) > 350 ? css`
+${({responsivePage}) => (responsivePage || 0) > 450 ? css`
 
 width: 300px;
 
@@ -46,6 +46,7 @@ width: 300px;
 css`
 
 width: 100%;
+
 
 `}
 
@@ -84,34 +85,37 @@ h1{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    &:hover{
+        opacity:0.7;
+    }
    }
 }
 
 .Maininformation {
     background-color: ${ColorContainer};
-    span{
-      color:${FontColor};
-    }
+   color:white;
+  
 
-    .information{
+
+    .number{
     display: flex;
     width: 100%;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
-    padding: 15px 0 15px 0;
+    padding: 15px 0  0;
 
     
 
         svg{
             width: 15px;
-            color:hotpink;
+            color:${primeColor};
         }
     }
 
 
-    .information2{
+    .email{
     display: flex;
     width: 100%;
     text-align: center;
@@ -124,14 +128,28 @@ h1{
 
         svg{
             width: 15px;
-            color:green;
+            color:${primeColor};
         }
     }
 
+    .localize{
+        display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 5px;
+    svg{
+            width: 15px;
+            color:${primeColor};
+        }
+    
 
-    p{
-        margin-top: 25px;
     }
+
+
+  
 }
 
 .buttons{

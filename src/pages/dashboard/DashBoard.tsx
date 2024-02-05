@@ -1,22 +1,44 @@
-import React from 'react'
+import React,{ useEffect,useState } from 'react'
 import * as S from './style'
 import Image from 'next/image'
 import CountUp from 'react-countup';
 import Link from 'next/link';
 
 
+
+
 const DashBoard = () => {
+
+
+  const [widthPage, setWidthPage] = useState<number>()
+
+  console.log(widthPage)
+  
+  useEffect(() => {
+
+    setWidthPage(window.innerWidth);
+
+    const handleResize = () => {
+      setWidthPage(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+
+  }, []);
+
+
+
   return (
     <S.Container>
     <S.SideContainer>
       <p>As a <span> Front<span> End</span></span> Developer </p>
-
       <S.AsideContainer>
-          <S.BoxContainer>
+          <S.BoxContainer responsivePage={widthPage}>
           <Link href='../../projects/Projects'>
-              <div className='moreProjects'><CountUp start={0} end={33} duration={2.5}/>+ <h3>Projects </h3></div>
+              <div className='moreProjects'><CountUp start={0} end={33} duration={4.5}/>+ <h3>Projects </h3></div>
           </Link> 
-          <Link href='../home/experience/Index'>
+          <Link href='/home/Home'>
               <div className='detailSkilss'><h3>Skills +</h3></div>
           </Link> 
            <Image src='/Artur2.png' alt='picture' width={350} height={350}/>

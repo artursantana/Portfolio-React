@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { FontColor, primeColor } from '../../../app/Style'
+import { primeColor } from '../../../app/Style'
 
 
 type InsideSectionSideProps = {
@@ -40,7 +40,8 @@ ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
 
 display: flex;
 flex-direction: column;
-padding-top: 180px;
+font-size: 10px;
+padding-top: 35px;
 
 `:
 css`
@@ -50,6 +51,7 @@ font-size: 15px;
 `
 
 export const UlContainer = styled.ul`
+
 
 padding: 15px;
 h1{
@@ -75,6 +77,7 @@ export const AsideContainer = styled.div`
 display: flex;
 flex-direction: column;
 
+
 li{
     
 }
@@ -87,6 +90,7 @@ flex-direction: column;
 
 ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
 text-align: left;
+font-size: 12px;
 `:
 css`
 text-align: center;
@@ -118,30 +122,39 @@ text-align: left;
 span{ color: ${primeColor};
 
 }
+overflow-y: scroll;
+height: 400px;
 
 `
 
 
 export const InsideSectionSide = styled.div<InsideSectionSideProps>`
+
 display: flex;
 flex-direction: column;
-margin-top: 15px;
+margin-top: 35px;
+
+
 
 
 
 
 ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
 width: 300px;
+font-size: 12px;
+padding-top: 40px;
 `:
 
 css`
-
+padding-top: 70px;
 `}
 
-     p{
-    margin-top: 30px;
-    height: 30px;
+
+div{
+    display:flex;
+    flex-direction:column;
     position: relative;
+    margin-top:40px;
     &::after{
         content: '';
         position: absolute;
@@ -151,7 +164,7 @@ css`
         
         ` : css`
         transition: all 1s;
-        width:100%;
+        width:95%;
         background-color: ${primeColor};
         height: 3px;
         bottom: 0;
@@ -161,9 +174,9 @@ css`
 
         
 
-    }
+    
 
-}
+}}
    
 
   `
