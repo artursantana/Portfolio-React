@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as S from '../../../../pagesStyles/projects/modal/style'
-import { Props } from '../props/Index'
+import { Props } from '../../../../app/component/props/Index'
 import ModalArchive from './insideModal/Index'
 
 
