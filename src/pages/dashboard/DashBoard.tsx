@@ -11,8 +11,6 @@ const DashBoard = () => {
 
 
   const [widthPage, setWidthPage] = useState<number>()
-
-  console.log(widthPage)
   
   useEffect(() => {
 
@@ -41,7 +39,7 @@ const DashBoard = () => {
           <Link href='/home/Home'>
               <div className='detailSkilss'><h3>Skills +</h3></div>
           </Link> 
-           <Image src='/Artur2.png' alt='picture' width={350} height={350}/>
+           <Image src='/images/Artur2.PNG' alt='picture' width={350} height={350}/>
           </S.BoxContainer>
       </S.AsideContainer>
       
