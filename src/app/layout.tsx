@@ -4,7 +4,7 @@ import './global.css'
 import React, { ReactNode } from 'react'
 import Index from './component/layoutmain/Index'
 
-const layout = ({children}: {children: ReactNode}) => {
+const layout = ({children}: {children: any}) => {
   return (
     
     <div className='body'>
