@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import * as S from './style';
+import * as S from '../../pagesStyles/home/style';
 
 
 import Index from './experience/Index'

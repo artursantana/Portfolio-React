@@ -1,5 +1,5 @@
 import React,{ useEffect,useState } from 'react'
-import * as S from './style'
+import * as S from '../../pagesStyles/dashboard/style'
 import Image from 'next/image'
 import CountUp from 'react-countup';
 import Link from 'next/link';

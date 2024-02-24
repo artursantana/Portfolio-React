@@ -1,7 +1,7 @@
 
 
 import styled from "@emotion/styled";
-import { primeColor } from '../../../../../app/Style'
+import { primeColor } from '../../../../app/Style'
 
 
 

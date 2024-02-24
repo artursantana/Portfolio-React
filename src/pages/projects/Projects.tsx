@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect } from 'react'
-import * as S from './style'
+import * as S from '../../pagesStyles/projects/style'
 
 
 

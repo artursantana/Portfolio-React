@@ -3,7 +3,7 @@
 
 
 import React from 'react'
-import * as S from './style'
+import * as S from '../../../../../pagesStyles/projects/modal/third/style'
 import Image from 'next/image'
 
 

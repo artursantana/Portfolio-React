@@ -2,7 +2,7 @@
 
 
 import React,{ useEffect, useState } from 'react';
-import * as S from './style'
+import * as S from '../../../pagesStyles/home/experience/style'
 
 type Props = {
   showDiv?: boolean;

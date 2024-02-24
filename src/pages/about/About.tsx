@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react'
-import * as S from './style'
+import * as S from '../../pagesStyles/about/style'
 import Image from 'next/image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
