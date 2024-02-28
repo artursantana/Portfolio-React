@@ -3,6 +3,7 @@ import * as S from '../../pagesStyles/dashboard/style'
 import Image from 'next/image'
 import CountUp from 'react-countup';
 import Link from 'next/link';
+import Logo from '../../../public/images/logo.png'
 
 
 
@@ -39,7 +40,7 @@ const DashBoard = () => {
           <Link href='/home/Home'>
               <div className='detailSkilss'><h3>Skills +</h3></div>
           </Link> 
-           <Image src='/images/Artur2.png' alt='picture' width={350} height={350}/>
+           <Image src={Logo} alt='picture' width={350} height={350}/>
           </S.BoxContainer>
       </S.AsideContainer>
       
