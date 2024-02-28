@@ -20,7 +20,6 @@ const Index = ({children}: {children: ReactNode}) => {
 
   const [widthPage, setWidthPage] = useState<number>()
 
-  console.log(widthPage)
   
   useEffect(() => {
 

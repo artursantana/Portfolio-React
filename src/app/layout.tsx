@@ -1,7 +1,7 @@
 
 "use client"
 import './global.css'
-import React, { ReactNode } from 'react'
+import React from 'react'
 import Index from './component/layoutmain/Index'
 
 const layout = ({children}: {children: any}) => {
