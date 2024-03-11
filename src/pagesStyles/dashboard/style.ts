@@ -45,7 +45,7 @@ display: flex;
 img{
     
     border-radius: 15px;
-    
+    z-index: 0;
 }
 
 `
@@ -65,6 +65,7 @@ img{
 .moreProjects{
     display: flex;
     position: absolute;
+    z-index: 1;
 
     ${({responsivePage}) => (responsivePage || 0) < 450 ? css`
 
@@ -107,7 +108,7 @@ img{
     ${({responsivePage}) => (responsivePage || 0) < 450 ? css`
 
     top: 45px;
-    right: -10px;
+    right: -15px;
     
     `:css`
     top: 45px;
