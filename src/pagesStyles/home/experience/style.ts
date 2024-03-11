@@ -120,11 +120,12 @@ export const SectionSide = styled.div`
 display: flex;
 flex-direction: column;
 text-align: left;
+overflow-y: scroll;
+height: 400px;
 span{ color: ${primeColor};
 
 }
-overflow-y: scroll;
-height: 400px;
+
 
 `
 
@@ -138,10 +139,9 @@ margin-top: 35px;
 
 
 ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
-width: 400px;
+
 font-size: 12px;
-padding-top: 40px;
-background-color: red;
+margin-top: 270px;
 `:
 
 css`
