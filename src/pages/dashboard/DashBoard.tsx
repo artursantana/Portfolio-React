@@ -3,7 +3,7 @@ import * as S from '../../pagesStyles/dashboard/style'
 import Image from 'next/image'
 import CountUp from 'react-countup';
 import Link from 'next/link';
-import Logo from '../../../public/images/about.jpg'
+import Logo from '../../../public/Artur2.png'
 
 
 
