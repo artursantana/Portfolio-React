@@ -52,8 +52,9 @@ font-size: 15px;
 
 export const UlContainer = styled.ul`
 
-
-padding: 15px;
+@media (max-width: 550px) {
+    margin-top:60px ;
+}
 h1{
     span{
         color: ${primeColor};
@@ -136,13 +137,11 @@ margin-top: 35px;
 
 
 
-
-
-
 ${({responsivePage}) => (responsivePage || 0) < 650 ? css`
-width: 300px;
+width: 400px;
 font-size: 12px;
 padding-top: 40px;
+background-color: red;
 `:
 
 css`
