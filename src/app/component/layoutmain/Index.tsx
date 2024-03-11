@@ -18,15 +18,13 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 const generatePDFBlob = async () => {
   try {
-    // Use o método fetch para buscar o PDF localmente
+    
     const response = await fetch('/cv.pdf');
-
-    // Verifique se a requisição foi bem-sucedida
+    
     if (!response.ok) {
       throw new Error('Erro ao buscar o arquivo PDF.');
     }
 
-    // Converte a resposta em um Blob
     const blob = await response.blob();
     return blob;
   } catch (error) {
