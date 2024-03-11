@@ -89,14 +89,33 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
       opacity: 0.7 ;
     }
     
-    background-image: url('/images/about.jpg');
-    background-size: cover;
-    background-position: center;
+    
     cursor: pointer;
     `}
 
-    
+    &.box1{
 
+      background-image: url('/images/about.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    &.box2{
 
+      background-image: url('/financeSystem.png');
+      background-size: cover;
+      background-position: center;
+      }
+    &.box3{
+
+      background-image: url('/images/about.jpg');
+      background-size: cover;
+      background-position: center;
+      }
+    &.box4{
+
+      background-image: url('/images/about.jpg');
+      background-size: cover;
+      background-position: center;
+}
 
 `;

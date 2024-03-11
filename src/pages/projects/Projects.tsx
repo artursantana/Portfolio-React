@@ -50,10 +50,10 @@ useEffect(() => {
       
           <S.SectionBottom>
             <S.MainProjects responsivePage={widthPage}>
-            <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={() => setFirstModal(!firstModal)}></S.BoxProject>
-              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setSecondModal(!secondModal)}></S.BoxProject>
-              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setThirdModal(!thirdModal)}></S.BoxProject>
-              <S.BoxProject responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setFourthModal(!fourthModal)}></S.BoxProject>
+            <S.BoxProject className='box1' responsivePage={widthPage} skeleton={pageLoad} onClick={() => setFirstModal(!firstModal)}></S.BoxProject>
+              <S.BoxProject className='box2' responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setSecondModal(!secondModal)}></S.BoxProject>
+              <S.BoxProject className='box3' responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setThirdModal(!thirdModal)}></S.BoxProject>
+              <S.BoxProject className='box4' responsivePage={widthPage} skeleton={pageLoad} onClick={()=>setFourthModal(!fourthModal)}></S.BoxProject>
       
             </S.MainProjects>
           </S.SectionBottom>
