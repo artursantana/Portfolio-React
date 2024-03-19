@@ -95,7 +95,7 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
 
     &.box1{
 
-      background-image: url('/teste.jpg');
+      background-image: url('/ecommerce.png');
       background-size: cover;
       background-position: center;
     }
@@ -107,13 +107,13 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
       }
     &.box3{
 
-      background-image: url('/images/about.jpg');
+      background-image: url('/teste.jpg');
       background-size: cover;
       background-position: center;
       }
     &.box4{
 
-      background-image: url('/images/about.jpg');
+      background-image: url('/teste.jpg');
       background-size: cover;
       background-position: center;
 }

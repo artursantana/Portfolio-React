@@ -24,6 +24,7 @@ export const Section = styled.div`
   width: 650px;
   height: 450px;
   background-color: ${primeColor};
+  
 `;
 
 export const ButtonModalClose = styled.button`
@@ -34,7 +35,6 @@ border: none;
 cursor: pointer;
 right: 0;
 color: red;
-
 
 `
 
