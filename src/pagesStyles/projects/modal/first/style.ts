@@ -18,7 +18,7 @@ background-color: #323232;
 display: flex;
 
 img{
-
+  width: 100%;
   @media (max-width: 600px) {
 
       width: 100%;
@@ -30,7 +30,12 @@ img{
 export const SectionMain = styled.div`
 
 display: flex;
+flex-direction: column;
 justify-content: space-around;
+
+@media (max-width: 500px) {
+          flex-direction: row;
+  }
 
 
 `
@@ -89,9 +94,13 @@ button{
           height:52px;
           opacity:0.4;
         }
+        @media (max-width: 800px) {
+          width: 100px;
+          height:40px;
+  }
         @media (max-width: 500px) {
           width: 100px;
-        height:40px;
+          height:40px;
   }
        
   }
