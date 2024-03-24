@@ -84,6 +84,31 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
     `
     : 
     css`
+
+&.box1{
+
+background-image: url('/ecommerce.png');
+background-size: cover;
+background-position: center;
+}
+&.box2{
+
+background-image: url('/financeSystem.png');
+background-size: cover;
+background-position: center;
+}
+&.box3{
+
+background-image: url('/teste.jpg');
+background-size: cover;
+background-position: center;
+}
+&.box4{
+
+background-image: url('/teste.jpg');
+background-size: cover;
+background-position: center;
+}
     
     &:hover{
       opacity: 0.7 ;
@@ -93,29 +118,6 @@ export const BoxProject = styled.div<{ skeleton?: number; responsivePage?: numbe
     cursor: pointer;
     `}
 
-    &.box1{
-
-      background-image: url('/ecommerce.png');
-      background-size: cover;
-      background-position: center;
-    }
-    &.box2{
-
-      background-image: url('/financeSystem.png');
-      background-size: cover;
-      background-position: center;
-      }
-    &.box3{
-
-      background-image: url('/teste.jpg');
-      background-size: cover;
-      background-position: center;
-      }
-    &.box4{
-
-      background-image: url('/teste.jpg');
-      background-size: cover;
-      background-position: center;
-}
+   
 
 `;
