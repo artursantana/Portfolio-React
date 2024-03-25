@@ -37,12 +37,9 @@ justify-content: space-around;
           flex-direction: row;
   }
 
-
 `
 
 export const SectionImgTechs = styled.div`
-
-
 
 display: flex;
 margin: -10px 0 10px 0;
